@@ -197,19 +197,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </button>
           </div>
         )}
-
-        {/* Bottom Local Demo Status Card */}
-        {!isCollapsed && (
-          <div className="p-3 m-3 rounded-xl bg-muted/50 border border-border/60 text-right">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-xs font-semibold text-foreground">حالت دمو لوکال (Frontend-Only)</span>
-            </div>
-            <p className="text-[11px] text-muted-foreground leading-relaxed">
-              داده‌ها در LocalStorage مرورگر ذخیره می‌شوند و نیاز به اینترنت و سرور بک‌اند ندارد.
-            </p>
-          </div>
-        )}
       </aside>
     </>
   );

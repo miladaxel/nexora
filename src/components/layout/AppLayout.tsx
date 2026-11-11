@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
 import { cn } from '@/lib/utils';
-import { Database, Github, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 export const AppLayout: React.FC = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -28,27 +28,6 @@ export const AppLayout: React.FC = () => {
       >
         {/* Top Header */}
         <Header onOpenMobileNav={() => setIsMobileNavOpen(true)} />
-
-        {/* Demo banner */}
-        <div className="bg-primary/5 border-b border-primary/10 px-4 py-2 text-right">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
-            <div className="flex items-center gap-2 text-primary font-medium">
-              <Database className="w-3.5 h-3.5 shrink-0" />
-              <span>
-                نسخه نمایش پرفورمنس پورتفولیو (Frontend-Only): تمامی داده‌ها به صورت خودکار در حافظه مرورگر (LocalStorage) نگهداری می‌شوند.
-              </span>
-            </div>
-            <a
-              href="https://github.com/miladaxel/nexora"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground font-mono transition-colors shrink-0"
-            >
-              <Github className="w-3.5 h-3.5" />
-              <span>miladaxel/nexora</span>
-            </a>
-          </div>
-        </div>
 
         {/* Dynamic Page Outlet */}
         <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-7xl w-full mx-auto animate-fade-in">
